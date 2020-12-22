@@ -41,4 +41,18 @@ def img_merge():
     cv.destroyAllWindows()
 
 
-img_merge()
+# 性能
+def tick_count():
+    # 检查是否启用了优化
+    print(cv.useOptimized())
+
+    # 关闭优化
+    cv.setUseOptimized(False)
+
+    e1 = cv.getTickCount()
+    # 执行代码
+    e2 = cv.getTickCount()
+    time = (e2 - e1) / cv.getTickFrequency()
+
+
+tick_count()
