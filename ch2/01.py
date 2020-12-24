@@ -19,6 +19,22 @@ def show():
     cv.destroyAllWindows()
 
 
+# 读取摄像头/视频
+def video_cap():
+    vc = cv.VideoCapture(0)
+    if vc.isOpened():
+        open, frame = vc.read()
+    else:
+        open = False
+
+    while open:
+        ret, frame = vc.read()
+        if frame is None:
+            break
+        if ret:
+            pass
+
+
 # 画
 def draw():
     # 创建黑色的图像
