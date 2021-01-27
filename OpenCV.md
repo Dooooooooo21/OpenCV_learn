@@ -61,5 +61,35 @@
    cv.setUseOptimized(False)
    ```
 
+3. 优化技术
+
+   - 避免使用循环
+   - 尽量使用向量，numpy、openCV对向量进行了优化
+   - ==利用高速缓存一致性==
+   - 避免复制数组，使用视图代替复制
+
+
+
+### PART 4
+
+#### 图像处理
+
+1. 颜色空间转换
+
+   - BGR到灰度图、HSV等
+
+   - `cvtColor(img, flag)` flag是转换类型
+
+     - COLOR_BGR2GRAY
+     - COLOR_BGR2HSV
+
+     ```python
+     flags = [i for i in dir(cv2) if str(i).startswith('COLOR_')]
+     ```
+
+2. 物体跟踪
+
+   - 转换到HSV，选择颜色阈值，进行跟踪
+
    
 
