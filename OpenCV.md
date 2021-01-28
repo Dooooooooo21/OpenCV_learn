@@ -91,5 +91,26 @@
 
    - 转换到HSV，选择颜色阈值，进行跟踪
 
+     ![image-20210128102936402](OpenCV.assets/image-20210128102936402.png)
    
+   
+   
+#### 几何变换
 
+1. 缩放
+
+   - `cv.resize(src, dst, interpolation)` 
+
+     interpolation: INTER_AERA, INTER_CUBIC, INTER_LINEAR
+
+2. 平移 `cv.warpAffine()`
+
+3. 旋转 `cv.getRotationMatrix2D()`
+
+4. 仿射变换
+
+5. 透视变换
+
+   ![image-20210128105149572](OpenCV.assets/image-20210128105149572.png)
+
+   
